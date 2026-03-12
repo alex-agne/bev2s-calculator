@@ -156,7 +156,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 // ─── PROFITABILITY HEATMAP ────────────────────────────────────────────────
 function ProfitabilityHeatmap({ blocks, effectiveKW, peakSharePct, opSharePct, sopSharePct, battEnabled, battKWh, battKW }) {
-  const retailSteps = [0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.60, 0.75];
+  const retailSteps = [0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.75];
   const utilSteps   = [2, 5, 8, 10, 12, 15, 18, 20, 30, 40, 50];
   const [hovered, setHovered] = useState(null);
 
@@ -248,7 +248,7 @@ export default function BEV2SEconomics() {
 
   // Activity — two-way linked: utilPct ↔ sessionsPerDay
   const [activityMode,   setActivityMode]   = useState("util");   // "util" | "sessions"
-  const [utilPct,        setUtilPct]        = useState(15);
+  const [utilPct,        setUtilPct]        = useState(5);
   const [manualSessions, setManualSessions] = useState(null);     // set when mode=sessions
 
   // Charging profile
